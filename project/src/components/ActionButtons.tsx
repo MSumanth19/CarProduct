@@ -35,11 +35,12 @@
 
 
 
+
 import { Phone, MessageCircle } from "lucide-react";
 
 export default function ActionButtons() {
 
-  // 📞 Book a Call (opens phone dialer)
+  // 📞 Book a Call
   const handleBookCall = () => {
     window.location.href = "tel:+919515040101";
   };
@@ -57,6 +58,7 @@ export default function ActionButtons() {
 
       {/* 📞 BOOK A CALL */}
       <button
+        type="button"
         onClick={handleBookCall}
         className="flex items-center justify-center gap-3 
                    bg-gradient-to-r from-blue-600 to-blue-700 
@@ -70,6 +72,7 @@ export default function ActionButtons() {
 
       {/* 💬 WHATSAPP */}
       <button
+        type="button"
         onClick={handleWhatsApp}
         className="flex items-center justify-center gap-3 
                    bg-gradient-to-r from-green-500 to-green-600 
