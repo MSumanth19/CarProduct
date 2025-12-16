@@ -5,16 +5,16 @@ interface CarCleaningPageProps {
 }
 
 const products = [
-  { name: "Micro Fiber Cloth", price: "₹120", imageUrl: "/Products/MicroFiber Clothes.jpg" },
-  { name: "Micro Fiber Gloves", price: "₹110", imageUrl: "/Products/Microfiber hand  gloves mit.jpg" },
-  { name: "Cleaning Shampoo", price: "₹180", imageUrl: "/Products/Car Wash Shampoo.jpg" },
-  { name: "Tissue Paper Box", price: "₹90", imageUrl: "/Products/Tissue paper box.jpg" },
-  { name: "Wet Wipes", price: "₹60", imageUrl: "/Products/wet.jpg" },
-  { name: "Odonil Spray", price: "₹85", imageUrl: "/Products/Odonil air fresheners spray.jpg" },
-  { name: "Microfiber Cleaning Duster", price: "₹70", imageUrl: "/Products/Microfiber cleaning duster.jpg" },
-  { name: "Tyre Polish", price: "₹150", imageUrl: "/Products/Tyre polish.jpg" },
-  { name: "Odonil AER Pocket Fragrance", price: "₹65", imageUrl: "/Products/Odonil aer pocket.jpg" },
-  { name : "Mobile Holder", Price:"₹65", imageUrl:"/Products/Phone Holder.jpg" }
+  { name: "Micro Fiber Cloth", price: "₹120", imageUrl: "public/Products/MicroFiber Clothes.jpg" },
+  { name: "Micro Fiber Gloves", price: "₹110", imageUrl: "public/Products/Microfiber hand  gloves mit.jpg" },
+  { name: "Cleaning Shampoo", price: "₹180", imageUrl: "public/Products/Car Wash Shampoo.jpg" },
+  { name: "Tissue Paper Box", price: "₹90", imageUrl: "public/Products/Tissue paper box.jpg" },
+  { name: "Wet Wipes", price: "₹60", imageUrl: "public/Products/wet.jpg" },
+  { name: "Odonil Spray", price: "₹85", imageUrl: "public/Products/Odonil air fresheners spray.jpg" },
+  { name: "Microfiber Cleaning Duster", price: "₹70", imageUrl: "public/Products/Microfiber cleaning duster.jpg" },
+  { name: "Tyre Polish", price: "₹150", imageUrl: "public/Products/Tyre polish.jpg" },
+  { name: "Odonil AER Pocket Fragrance", price: "₹65", imageUrl: "public/Products/Odonil aer pocket.jpg" },
+  { name : "Mobile Holder", Price:"₹65", imageUrl:"public/Products/Phone Holder.jpg" }
 ];
 
 export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
@@ -35,7 +35,7 @@ export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
         <div
           className="relative rounded-3xl shadow-2xl overflow-hidden mb-24"
           style={{
-            backgroundImage: "url('/Products/carproduct.jpeg')",
+            backgroundImage: "url('public/Products/carproduct.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: "420px",
