@@ -16,5 +16,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/CarProduct/',   // 👈 ADD THIS LINE
+  base: process.env.VITE_BASE_PATH || "/CarProduct" ,   // 👈 ADD THIS LINE
 })
