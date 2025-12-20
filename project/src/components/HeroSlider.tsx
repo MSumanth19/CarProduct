@@ -20,8 +20,7 @@ const slides: Slide[] = [
     title: "Professional Car Service",
     description: "Expert maintenance and repair for your vehicle",
     category: "car-service",
-    imageUrl:
-      "public/Products/car1.jpg",
+    imageUrl: "/Products/car1.jpg",
     imagePosition: "center 30%",
   },
   {
@@ -29,8 +28,7 @@ const slides: Slide[] = [
     title: "Premium Car Cleaning Products",
     description: "Top-quality products for a spotless shine",
     category: "car-cleaning",
-    imageUrl:
-      "public/Products/car2.avif",
+    imageUrl: "/Products/car2.avif",
     imagePosition: "center 50%",
   },
   {
@@ -38,8 +36,7 @@ const slides: Slide[] = [
     title: "House Cleaning Products",
     description: "Keep your home sparkling clean",
     category: "house-cleaning",
-    imageUrl:
-      "public/Products/car3.webp",
+    imageUrl: "/Products/car3.webp",
     imagePosition: "center 60%",
   },
 ];

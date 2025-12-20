@@ -20,7 +20,7 @@ interface CarServicePageProps {
   onBack: () => void;
 }
 
-const serviceCategories = [ 
+const serviceCategories = [
   { name: "Car Services", icon: Car },
   { name: "Batteries", icon: Battery },
   { name: "Tyres & Wheel Care", icon: CircleDot },
@@ -50,7 +50,7 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
           className="rounded-2xl p-12 text-white mb-20 relative overflow-hidden shadow-xl"
           style={{
             backgroundImage:
-              "linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('public/Products/Car service1.webp')",
+              "linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/Products/Car service1.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -92,11 +92,11 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
 
           {/* Full Image */}
           <div className="w-full h-[450px] rounded-xl overflow-hidden mb-8 bg-white flex items-center justify-center">
-  <img
-    src="public/Products/Car service.jpg"
-    className="max-w-full max-h-full object-contain"
-  />
-</div>
+            <img
+              src="/Products/Car service.jpg"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
 
 
 
