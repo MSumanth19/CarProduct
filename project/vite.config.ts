@@ -14,8 +14,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [react()],
-  base: mode === 'production' ? '/CarProduct/' : '/',  // "/CarProduct/" for production build, "/" for dev
-}))
+  base: '/',  // Use "/" for Vercel deployment (root domain)
+})
 
