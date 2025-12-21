@@ -1,4 +1,4 @@
-import { ArrowLeft, Phone, MessageCircle } from "lucide-react";
+import { ArrowLeft, Phone, MessageCircle, Shield, Sparkles, Star } from "lucide-react";
 
 interface CarCleaningPageProps {
   onBack: () => void;
@@ -14,7 +14,7 @@ const products = [
   { name: "Microfiber Cleaning Duster", price: "₹70", imageUrl: "/Products/Microfiber cleaning duster.jpg" },
   { name: "Tyre Polish", price: "₹150", imageUrl: "/Products/Tyre polish.jpg" },
   { name: "Odonil AER Pocket Fragrance", price: "₹65", imageUrl: "/Products/Odonil aer pocket.jpg" },
-  { name: "Mobile Holder", Price: "₹65", imageUrl: "/Products/Phone Holder.jpg" }
+  { name: "Mobile Holder", price: "₹65", imageUrl: "/Products/Phone Holder.jpg" }
 ];
 
 export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
@@ -56,16 +56,19 @@ export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
           {/* Mobile: Stacked below, Desktop: Absolute overlapping */}
           <div className="relative md:absolute z-20 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 px-4 md:px-10 mt-10 md:mt-0 md:-bottom-24 w-full">
             <div className="bg-white p-6 rounded-2xl shadow-xl text-center">
+              <Shield className="w-12 h-12 text-green-600 mx-auto mb-3" />
               <h3 className="text-xl font-bold mb-2">Gentle & Effective</h3>
               <p className="text-gray-600">Perfect for all car surfaces</p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-xl text-center">
+              <Sparkles className="w-12 h-12 text-green-600 mx-auto mb-3" />
               <h3 className="text-xl font-bold mb-2">Fresh Fragrance</h3>
               <p className="text-gray-600">Keeps your car smelling great</p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl shadow-xl text-center">
+              <Star className="w-12 h-12 text-green-600 mx-auto mb-3" />
               <h3 className="text-xl font-bold mb-2">Top Quality</h3>
               <p className="text-gray-600">Premium-grade materials</p>
             </div>
