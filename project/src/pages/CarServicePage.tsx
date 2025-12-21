@@ -47,7 +47,7 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
 
         {/* =================== COMBINED BANNER =================== */}
         <div
-          className="rounded-2xl p-12 text-white mb-20 relative overflow-hidden shadow-xl"
+          className="rounded-2xl p-6 md:p-12 text-white mb-12 md:mb-20 relative overflow-hidden shadow-xl"
           style={{
             backgroundImage:
               "linear-gradient(to right, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/Products/Car service1.webp')",
@@ -55,16 +55,16 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
             backgroundPosition: "center",
           }}
         >
-          <div className="flex items-center gap-4 mb-4">
-            <Wrench className="w-16 h-16" />
-            <h1 className="text-5xl font-bold">Professional Car Service</h1>
+          <div className="flex flex-col md:flex-row items-center gap-4 mb-4 text-center md:text-left">
+            <Wrench className="w-12 h-12 md:w-16 md:h-16" />
+            <h1 className="text-3xl md:text-5xl font-bold">Professional Car Service</h1>
           </div>
-          <p className="text-xl opacity-90 mb-10">
+          <p className="text-lg md:text-xl opacity-90 mb-8 md:mb-10 text-center md:text-left">
             Premium & doorstep car service solutions
           </p>
 
           {/* Highlight Cards Inside Banner */}
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { title: "Quick Service", icon: Clock },
               { title: "Quality Guaranteed", icon: Shield },
@@ -77,7 +77,7 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
                   className="bg-white p-6 rounded-xl shadow-md text-center text-gray-800 hover:scale-105 transition"
                 >
                   <Icon className="w-10 h-10 mx-auto mb-2 text-blue-600" />
-                  <h3 className="text-xl font-bold">{item.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold">{item.title}</h3>
                 </div>
               );
             })}
@@ -85,13 +85,13 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
         </div>
 
         {/* =================== MAIN SERVICE SECTION =================== */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800 text-center md:text-left">
             All Services Are Available
           </h2>
 
           {/* Full Image */}
-          <div className="w-full h-[450px] rounded-xl overflow-hidden mb-8 bg-white flex items-center justify-center">
+          <div className="w-full h-[250px] md:h-[450px] rounded-xl overflow-hidden mb-8 bg-white flex items-center justify-center">
             <img
               src="/Products/Car service.jpg"
               className="max-w-full max-h-full object-contain"
@@ -101,16 +101,16 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
 
 
           {/* Service Icons */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {serviceCategories.map((s, i) => {
               const Icon = s.icon;
               return (
                 <div
                   key={i}
-                  className="bg-gray-50 border rounded-xl shadow-sm p-6 flex flex-col items-center text-center transition hover:scale-110 hover:shadow-xl"
+                  className="bg-gray-50 border rounded-xl shadow-sm p-4 md:p-6 flex flex-col items-center text-center transition hover:scale-110 hover:shadow-xl"
                 >
-                  <Icon className="w-12 h-12 text-blue-600 mb-3" />
-                  <h3 className="text-lg font-semibold">{s.name}</h3>
+                  <Icon className="w-10 h-10 md:w-12 md:h-12 text-blue-600 mb-3" />
+                  <h3 className="text-base md:text-lg font-semibold">{s.name}</h3>
                 </div>
               );
             })}
@@ -118,10 +118,10 @@ export default function CarServicePage({ onBack }: CarServicePageProps) {
         </div>
 
         {/* =================== SERVICE PACKAGES =================== */}
-        <div className="bg-white p-10 rounded-2xl shadow-lg mb-12">
-          <h2 className="text-3xl font-bold mb-6">Service Packages</h2>
+        <div className="bg-white p-6 md:p-10 rounded-2xl shadow-lg mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center md:text-left">Service Packages</h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 name: "Basic Car Cleaning",

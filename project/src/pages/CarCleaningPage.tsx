@@ -5,23 +5,23 @@ interface CarCleaningPageProps {
 }
 
 const products = [
-  { name: "Micro Fiber Cloth", price: "₹120", imageUrl: "public/Products/MicroFiber Clothes.jpg" },
-  { name: "Micro Fiber Gloves", price: "₹110", imageUrl: "public/Products/Microfiber hand  gloves mit.jpg" },
-  { name: "Cleaning Shampoo", price: "₹180", imageUrl: "public/Products/Car Wash Shampoo.jpg" },
-  { name: "Tissue Paper Box", price: "₹90", imageUrl: "public/Products/Tissue paper box.jpg" },
-  { name: "Wet Wipes", price: "₹60", imageUrl: "public/Products/wet.jpg" },
-  { name: "Odonil Spray", price: "₹85", imageUrl: "public/Products/Odonil air fresheners spray.jpg" },
-  { name: "Microfiber Cleaning Duster", price: "₹70", imageUrl: "public/Products/Microfiber cleaning duster.jpg" },
-  { name: "Tyre Polish", price: "₹150", imageUrl: "public/Products/Tyre polish.jpg" },
-  { name: "Odonil AER Pocket Fragrance", price: "₹65", imageUrl: "public/Products/Odonil aer pocket.jpg" },
-  { name : "Mobile Holder", Price:"₹65", imageUrl:"public/Products/Phone Holder.jpg" }
+  { name: "Micro Fiber Cloth", price: "₹120", imageUrl: "/Products/MicroFiber Clothes.jpg" },
+  { name: "Micro Fiber Gloves", price: "₹110", imageUrl: "/Products/Microfiber hand  gloves mit.jpg" },
+  { name: "Cleaning Shampoo", price: "₹180", imageUrl: "/Products/Car Wash Shampoo.jpg" },
+  { name: "Tissue Paper Box", price: "₹90", imageUrl: "/Products/Tissue paper box.jpg" },
+  { name: "Wet Wipes", price: "₹60", imageUrl: "/Products/wet.jpg" },
+  { name: "Odonil Spray", price: "₹85", imageUrl: "/Products/Odonil air fresheners spray.jpg" },
+  { name: "Microfiber Cleaning Duster", price: "₹70", imageUrl: "/Products/Microfiber cleaning duster.jpg" },
+  { name: "Tyre Polish", price: "₹150", imageUrl: "/Products/Tyre polish.jpg" },
+  { name: "Odonil AER Pocket Fragrance", price: "₹65", imageUrl: "/Products/Odonil aer pocket.jpg" },
+  { name: "Mobile Holder", Price: "₹65", imageUrl: "/Products/Phone Holder.jpg" }
 ];
 
 export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-6 relative">
       <div className="max-w-6xl mx-auto">
-        
+
         {/* BACK BUTTON */}
         <button
           onClick={onBack}
@@ -33,29 +33,28 @@ export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
 
         {/* =================== COMBINED BANNER =================== */}
         <div
-          className="relative rounded-3xl shadow-2xl overflow-hidden mb-24"
+          className="relative rounded-3xl shadow-2xl mb-12 md:mb-24 overflow-visible"
           style={{
-            backgroundImage: "url('public/Products/carproduct.jpeg')",
+            backgroundImage: "url('/Products/carproduct.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "420px",
+            minHeight: "420px",
           }}
-
         >
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/50 rounded-3xl"></div>
 
           <div className="relative z-10 text-center text-white pt-16 px-6">
-            <h1 className="text-5xl font-extrabold drop-shadow-lg">
+            <h1 className="text-3xl md:text-5xl font-extrabold drop-shadow-lg leading-tight">
               Car Cleaning Products
             </h1>
-            <p className="text-xl opacity-90 mt-3 drop-shadow">
+            <p className="text-lg md:text-xl opacity-90 mt-3 drop-shadow">
               Trusted & high-quality car care essentials
             </p>
           </div>
 
           {/* FEATURE CARDS */}
-          <div className="relative z-20 grid grid-cols-1 md:grid-cols-3 gap-6 px-10 -bottom-24 absolute w-full">
-
+          {/* Mobile: Stacked below, Desktop: Absolute overlapping */}
+          <div className="relative md:absolute z-20 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 px-4 md:px-10 mt-10 md:mt-0 md:-bottom-24 w-full">
             <div className="bg-white p-6 rounded-2xl shadow-xl text-center">
               <h3 className="text-xl font-bold mb-2">Gentle & Effective</h3>
               <p className="text-gray-600">Perfect for all car surfaces</p>
@@ -70,26 +69,25 @@ export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
               <h3 className="text-xl font-bold mb-2">Top Quality</h3>
               <p className="text-gray-600">Premium-grade materials</p>
             </div>
-
           </div>
         </div>
 
-        {/* SPACING */}
-        <div className="mt-28"></div>
+        {/* SPACING - Different for mobile/desktop because cards are relative on mobile */}
+        <div className="mt-8 md:mt-28"></div>
 
         {/* ================= PRODUCT GRID ================= */}
-        <div className="bg-white rounded-2xl shadow-lg p-8">
-          <h2 className="text-3xl font-bold mb-6 text-gray-800">All Products</h2>
+        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-800">All Products</h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {products.map((product, index) => (
               <div
                 key={index}
-                className="border border-gray-300 rounded-2xl p-7 hover:shadow-xl transition transform hover:-translate-y-1 bg-white"
-                style={{ minHeight: "380px" }}
+                className="border border-gray-300 rounded-2xl p-5 md:p-7 hover:shadow-xl transition transform hover:-translate-y-1 bg-white flex flex-col"
+                style={{ minHeight: "auto" }}
               >
                 {/* FULL IMAGE */}
-                <div className="h-56 rounded-xl mb-5 overflow-hidden bg-white shadow-sm flex items-center justify-center">
+                <div className="h-48 md:h-56 rounded-xl mb-5 overflow-hidden bg-white shadow-sm flex items-center justify-center">
                   <img
                     src={product.imageUrl}
                     alt={product.name}
@@ -97,15 +95,15 @@ export default function CarCleaningPage({ onBack }: CarCleaningPageProps) {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold mb-2 text-gray-800">{product.name}</h3>
+                <h3 className="text-lg md:text-xl font-bold mb-2 text-gray-800">{product.name}</h3>
 
-                <p className="text-2xl font-bold text-green-600">{product.price}</p>
+                <p className="text-xl md:text-2xl font-bold text-green-600">{product.price}</p>
 
                 {/* ORDER NOW BUTTON */}
                 <a
                   href={`https://wa.me/919515040101?text=I want to order: ${product.name}`}
                   target="_blank"
-                  className="w-full mt-4 bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition block text-center"
+                  className="w-full mt-auto bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg transition block text-center"
                 >
                   Order Now
                 </a>
